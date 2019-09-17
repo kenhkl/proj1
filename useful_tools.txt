@@ -1,0 +1,34 @@
+VIM
+----------------
+1. colortheme
+https://github.com/raphamorim/lucario
+
+2. .vimrc
+" 一个tab键所占的列数，linux 内核代码建议每个tab占用8列
+set tabstop=4
+" 敲入tab键时实际占有的列数。
+set softtabstop=4
+" shiftwidth用于设置Tab键宽度
+set shiftwidth=4
+" expandtab用于将Tab转化为空格
+set expandtab
+" 设置回车后自动缩进
+set autoindent
+set cindent
+set cinoptions={0,1s,t0,n-2,p2s,(03s,=.5s,>1s,=1s,:1s
+" nu用于显示行号
+set nu
+" ts用于设置tab键表示的空格数
+set ts=4
+" 高亮光标所在行
+set cursorline
+" 显示状态栏
+set laststatus=2
+" 配置状态栏
+function! CurDir()
+    let curdir = substitute(getcwd(), $HOME, "~", "g")
+    return curdir
+endfunction
+set statusline=[%n]\ %f%m%r%h\ \|\ \ pwd:\ %{CurDir()}\ \ \|%=\|\ %l,%c\ %p%%\ \|\ %{$USER}\ @\ %{hostname()}\
+" colorscheme用于选择配色方案
+colorscheme lucario
