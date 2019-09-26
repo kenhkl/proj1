@@ -18,6 +18,7 @@ set cindent
 set cinoptions={0,1s,t0,n-2,p2s,(03s,=.5s,>1s,=1s,:1s
 " nu用于显示行号
 set nu
+set mouse=a
 " 高亮光标所在行
 set cursorline
 " 显示状态栏
